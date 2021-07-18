@@ -31,6 +31,6 @@
 <br/><br/>
 
 # DISCLOSURE (`please read`)
- By owning `PlayItForward` Tokens, you `acknowledge` and `agree` that `PlayItForward` Tokens are *not** `securities` *nor* `investment contracts`.  You also `agree` to hold the team `harmless` and `not liable` for `any losses` or `taxes` you may incur. Please note that `PlayItForward` is a community driven DeFi Ecosystem and not a registered digital currency, always make sure that you are in compliance with your local laws and regulations before you make any transaction. Tokens, Cryptocurrencies are not legal tender and are not investments.
+ By owning `PlayItForward` Tokens, you `acknowledge` and `agree` that `PlayItForward` Tokens are *not* `securities` *nor* `investment contracts`.  You also `agree` to hold the team `harmless` and `not liable` for `any losses` or `taxes` you may incur. Please note that `PlayItForward` is a community driven DeFi Ecosystem and not a registered digital currency, always make sure that you are in compliance with your local laws and regulations before you make any transaction. Tokens, Cryptocurrencies are not legal tender and are not investments.
 
  Contact: info@playitforward.io
