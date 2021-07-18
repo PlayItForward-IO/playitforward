@@ -30,7 +30,7 @@
 `PlayItForward` is a decentralized token, and it is secured by millions of computers worldwide on the Ethereum network.  `PlayItForward` can be used as a store value duo to its limited supply, making its upside unlimited. It can also be transferred in tiny fractional amounts, making it a great vehicle for micro-transactions.
 <br/><br/>
 
-# DISCLOSURE (must read)
+# DISCLOSURE (`please read`)
  By owning `PlayItForward` Tokens, you `acknowledge` and `agree` that `PlayItForward` Tokens are *not** `securities` *nor* `investment contracts`.  You also `agree` to hold the team `harmless` and `not liable` for `any losses` or `taxes` you may incur. Please note that `PlayItForward` is a community driven DeFi Ecosystem and not a registered digital currency, always make sure that you are in compliance with your local laws and regulations before you make any transaction. Tokens, Cryptocurrencies are not legal tender and are not investments.
 
  Contact: info@playitforward.io
