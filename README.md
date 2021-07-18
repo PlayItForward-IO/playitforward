@@ -11,9 +11,7 @@
 `PlayItForward` Token is pegged to a minimum value of 0.001 $USDC with a fixed-supply of 1,000,000 tokens, for a total initial market cap of 10,000.00+ $USDC.
 
 ## Mission
- `PlayItForward` Token was founded by an entrepreneur software architect, as a `social experiment`, not with the main purpose of trade or a quick profit. It was made as it needed to `exists`.
-
- `PlayItForward` Token can be seen as a `Million Acts Of Kindness` Token.  Remember, that if millions of micro-transactions, if pointed to the right cause, it can be very impactful.  
+ `PlayItForward` Token was founded by an entrepreneur software architect, as a `social experiment`, not with the main purpose of trade or a quick profit. It was made as it needed to `exists`.  `PlayItForward` Token can be seen as a `Million Acts Of Kindness` Token.  Remember, that if millions of micro-transactions, if pointed to the right cause, it can be very impactful.  
 
 <p style="text-align: center; font-size:20px">❤️ Happy Playing It Forward! ❤️</p>
 
