@@ -9,8 +9,8 @@ contract("PlayItForward:Core", (accounts) => {
     const decimals = 18;
     const totalSupply = 1000000;
 
-    const toEth = (balance) => web3.utils.fromWei(balance, 'ether');
-    const toWei = (balance) => web3.utils.toWei(balance, 'ether');
+    const toEth = (balance) => web3.utils.fromWei(balance, 'ether').toString();
+    const toWei = (balance) => web3.utils.toWei(balance, 'ether').toString();
 
 
     before(async () => {
