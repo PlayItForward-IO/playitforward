@@ -1,41 +1,45 @@
 const PlayItForward = artifacts.require('PlayItForward');
 
 contract("PlayItForward", (accounts) => {
-    // console.log(accounts);
-    const toEth = (balance) => web3.utils.fromWei(balance);
+    const [deployer, recipient] = accounts;
+    const owner = deployer
 
-    beforeEach(async () => {
+    const name = 'PlayItForward';
+    const symbol = 'PFWD';
+    const decimals = 18;
+    const totalSupply = 1000000;
+
+    const toEth = (balance) => web3.utils.fromWei(balance, 'ether');
+    const toWei = (balance) => web3.utils.toWei(balance, 'ether');
+
+
+    before(async () => {
         pfwd = await PlayItForward.deployed();
     });
 
-    it("should create the token with the name `PlayItForward`", async () => {
-        const name = await pfwd.name.call();
-        assert.equal(name, 'PlayItForward');
+    it(`has ${name} as name`, async () => {
+        assert.equal(await pfwd.name(), name);
     });
 
-    it("should create the token with the symbol `PFWD`", async () => {
-        const symbol = await pfwd.symbol.call();
-        assert.equal(symbol, 'PFWD');
+    it(`has ${symbol} as symbol`, async () => {
+        assert.equal(await pfwd.symbol(), symbol);
     });
 
-    it("should create the token with 18 decimal points", async () => {
-        const decimals = await pfwd.decimals.call();
-        assert.equal(decimals, '18');
+    it(`has ${decimals} decimals`, async () => {
+        assert.equal(await pfwd.decimals(), `${decimals}`);
     });
 
-    it("should mint a total supply of 1M token on deploy", async () => {
-        const balance = await pfwd.totalSupply.call();
-        assert.equal(toEth(balance), '1000000');
+    it(`has minted ${totalSupply} token on deploy`, async () => {
+        assert.equal(toEth(await pfwd.totalSupply()), `${totalSupply}`);
     });
 
-    it("should mint a total supply of 1M token & transfer to owner on deploy", async () => {
-        const balance = await pfwd.balanceOf.call(accounts[0]);
-        assert.equal(toEth(balance), '1000000');
+    it(`has assigned ${totalSupply} token to owner (deployer) `, async () => {
+        assert.equal(toEth(await pfwd.balanceOf(deployer)), `${totalSupply}`);
     });
 
-    it("should ensure the total supply of 1M token is immutable", async () => {
+    it("has make the total supply immutable (mint api removed)", async () => {
         try {
-            await pfwd.mint(accounts[0], '1000000')
+            await pfwd.mint(recipient, `${totalSupply}`)
         }
         catch (error) {
             assert.equal(error.message, 'pfwd.mint is not a function');
