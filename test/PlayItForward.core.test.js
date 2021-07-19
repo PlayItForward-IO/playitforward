@@ -37,7 +37,7 @@ contract("PlayItForward:Core", (accounts) => {
         assert.equal(toEth(await pfwd.balanceOf(deployer)), `${totalSupply}`);
     });
 
-    it("has make the total supply immutable (mint api removed)", async () => {
+    it("has made the total supply immutable (mint api removed)", async () => {
         try {
             await pfwd.mint(recipient, `${totalSupply}`)
         }
