@@ -27,6 +27,8 @@
   "devDependencies": {
     "@openzeppelin/contracts": "^4.2.0",
     "@openzeppelin/test-helpers": "^0.5.12",
+    "chai": "^4.3.4",
+    "prettier": "^2.3.2",
     "truffle": "^5.4.1"
   }
 }
