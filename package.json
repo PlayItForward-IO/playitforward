@@ -1,0 +1,29 @@
+{
+  "name": "playitforward",
+  "version": "0.0.1",
+  "description": "Play It Forward Token - Million Acts of Kindness",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlayItForward-IO/playitforward.git"
+  },
+  "keywords": [
+    "Support",
+    "Content",
+    "Creators",
+    "Token",
+    "Micro-transactions"
+  ],
+  "author": "PlayItForward",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PlayItForward-IO/playitforward/issues"
+  },
+  "homepage": "https://github.com/PlayItForward-IO/playitforward#readme",
+  "devDependencies": {
+    "truffle": "^5.4.1"
+  }
+}
