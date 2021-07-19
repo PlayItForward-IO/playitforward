@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/PlayItForward-IO/playitforward#readme",
   "devDependencies": {
+    "@openzeppelin/contracts": "^4.2.0",
     "truffle": "^5.4.1"
   }
 }
