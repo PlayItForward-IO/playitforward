@@ -1,6 +1,6 @@
 const PlayItForward = artifacts.require('PlayItForward');
 
-contract("PlayItForward", (accounts) => {
+contract("PlayItForward:Core", (accounts) => {
     const [deployer, recipient] = accounts;
     const owner = deployer
 

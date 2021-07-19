@@ -2,10 +2,6 @@
   "name": "playitforward",
   "version": "0.0.1",
   "description": "Play It Forward Token - Million Acts of Kindness",
-  "scripts": {
-    "truffle": "node_modules/.bin/truffle",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PlayItForward-IO/playitforward.git"
@@ -23,6 +19,10 @@
     "url": "https://github.com/PlayItForward-IO/playitforward/issues"
   },
   "homepage": "https://github.com/PlayItForward-IO/playitforward#readme",
+  "scripts": {
+    "truffle": "node_modules/.bin/truffle",
+    "test": "yarn truffle test --network development test/*.js"
+  },
   "devDependencies": {
     "@openzeppelin/contracts": "^4.2.0",
     "truffle": "^5.4.1"
