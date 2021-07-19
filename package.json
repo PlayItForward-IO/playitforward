@@ -21,6 +21,7 @@
   "homepage": "https://github.com/PlayItForward-IO/playitforward#readme",
   "scripts": {
     "truffle": "node_modules/.bin/truffle",
+    "build": "yarn truffle compile",
     "test": "yarn truffle test --network development test/*.js"
   },
   "devDependencies": {
