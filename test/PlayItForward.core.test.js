@@ -42,7 +42,7 @@ contract("PlayItForward:Core", (accounts) => {
             await pfwd.mint(recipient, `${totalSupply}`)
         }
         catch (error) {
-            assert.equal(error.message, 'pfwd.mint is not a function');
+            assert.equal(error.message.includes('pfwd.mint is not a function'), true);
         }
     });
 });
