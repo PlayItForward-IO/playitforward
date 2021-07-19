@@ -8,6 +8,8 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 string constant _tokenName = "PlayItForward";
 string constant _tokenSymbol = "PFWD";
 uint256 constant _totalFixeDSupply = 1000000;
+uint256 constant _totalDecimalPoints = 18; // 18 decimal points
+uint256 constant _totalDecimals = 10**_totalDecimalPoints; //the relationship between Ether and Wei
 
 /**
  * @dev {PlayItForward} token, including:
@@ -26,6 +28,6 @@ contract PlayItForward is ERC20Burnable {
      * See {ERC20-constructor}.
      */
     constructor() ERC20(_tokenName, _tokenSymbol) {
-        _mint(msg.sender, _totalFixeDSupply * 10**decimals());
+        _mint(msg.sender, _totalFixeDSupply * _totalDecimals);
     }
 }
