@@ -10,8 +10,10 @@ contract("PlayItForward", (accounts) => {
   const decimals = 18;
   const totalSupply = 1000000;
 
-  const toEth = (balance) => web3.utils.fromWei(balance, "ether").toString();
-  const toWei = (balance) => web3.utils.toWei(balance, "ether").toString();
+  const toEth = (balance) =>
+    web3.utils.fromWei(balance.toString(), "ether").toString();
+  const toWei = (balance) =>
+    web3.utils.toWei(balance.toString(), "ether").toString();
 
   const { ZERO_ADDRESS } = constants;
 
@@ -25,8 +27,8 @@ contract("PlayItForward", (accounts) => {
     });
 
     it(`can transfer ${totalSupply / 2} token to a recipient `, async () => {
-      const toTransfer = new BN(totalSupply / 2);
-      await pfwd.transfer(recipient, toWei(toTransfer));
+      const amount = toWei(totalSupply / 2);
+      await pfwd.transfer(recipient, amount);
       assert.equal(
         toEth(await pfwd.balanceOf(recipient)),
         `${totalSupply / 2}`
@@ -34,8 +36,8 @@ contract("PlayItForward", (accounts) => {
     });
 
     it(`can transfer all tokens to a recipient `, async () => {
-      const toTransfer = new BN(totalSupply / 2);
-      await pfwd.transfer(recipient, toWei(toTransfer));
+      const amount = toWei(totalSupply / 2);
+      await pfwd.transfer(recipient, amount);
       assert.equal(toEth(await pfwd.balanceOf(recipient)), `${totalSupply}`);
     });
 
@@ -44,10 +46,10 @@ contract("PlayItForward", (accounts) => {
       assert.equal(toEth(await pfwd.balanceOf(owner)), "0");
 
       // we have spend all tokens so we can't transfer more, not even 1
-      const toTransfer = new BN(1);
+      const amount = toWei(1);
 
       try {
-        await pfwd.transfer(recipient, toWei(toTransfer));
+        await pfwd.transfer(recipient, amount);
       } catch (error) {
         assert.equal(
           error.message.includes("transfer amount exceeds balance"),
