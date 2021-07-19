@@ -2,7 +2,6 @@
   "name": "playitforward",
   "version": "0.0.1",
   "description": "Play It Forward Token - Million Acts of Kindness",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
