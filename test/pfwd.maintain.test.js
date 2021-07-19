@@ -27,13 +27,27 @@ contract("PlayItForward", (accounts) => {
       assert.equal(toEth(await pfwd.balanceOf(owner)), `${totalSupply}`);
       const amount = toWei(totalSupply);
       const receipt = await pfwd.burn(amount, { from: owner });
-      // const foo = expectEvent(receipt, "Transfer", {
-      //   from: owner,
-      //   to: ZERO_ADDRESS,
-      //   value: amount,
-      // });
-      // console.log(foo);
-      // expect(await pfwd.balanceOf(owner)).to.be.bignumber.equal("0");
+      expectEvent(receipt, "Transfer", {
+        from: owner,
+        to: ZERO_ADDRESS,
+        value: amount,
+      });
+      assert.equal(toEth(await pfwd.balanceOf(owner)), 0);
+      console.log(toEth(await pfwd.balanceOf(owner)));
+    });
+
+    it("holders cannot burn tokens they don't have", async function () {
+      assert.equal(toEth(await pfwd.balanceOf(owner)), 0);
+      const amount = toWei(1);
+      try {
+        await pfwd.burn(amount, { from: owner });
+      } catch (error) {
+        assert.equal(
+          error.message.includes("burn amount exceeds balance"),
+          true
+        );
+      }
+      assert.equal(toEth(await pfwd.balanceOf(owner)), 0);
     });
   });
 });
