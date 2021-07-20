@@ -5,21 +5,20 @@ pragma solidity ^0.8.6;
 // Import ERC20Burnable from the OpenZeppelin Contracts library
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 
-string constant _tokenName = "PlayItForward";
-string constant _tokenSymbol = "PFWD";
-uint256 constant _totalFixeDSupply = 1000000;
-uint256 constant _totalDecimalPoints = 18; // 18 decimal points
-uint256 constant _totalDecimals = 10**_totalDecimalPoints; //the relationship between Ether and Wei
+string constant _name = "PlayItForward";
+string constant _symbol = "PFWD";
+uint256 constant _maxTokens = 1000000; // unit = ether
+uint256 constant _maxSupply = _maxTokens * 10 ** 18; // unit = wei
 
 /**
  * @dev {PlayItForward} token, including:
  *
  *  - Mint the fixed supply of 1,00,000,000 tokens on creation (deflationary mechnism)
- *  - Disable future goverance by limiiting access control mechanism (for minting/pausing)
+ *  - Disable future goverance by limitting access control mechanism (no minting/pausing)
  *  - Enable the ability for holders to burn (aka destroy) their tokens
+ *  - Enable the ability for holders to transfer tokens to other accounts
  *
- * This contract uses {ERC20Burnable} to include burn capabilities
- *
+ *  - Info: https://playitforward.io
  */
 contract PlayItForward is ERC20Burnable {
     /**
@@ -27,7 +26,7 @@ contract PlayItForward is ERC20Burnable {
      *
      * See {ERC20-constructor}.
      */
-    constructor() ERC20(_tokenName, _tokenSymbol) {
-        _mint(msg.sender, _totalFixeDSupply * _totalDecimals);
+    constructor() ERC20(_name, _symbol) {
+        _mint(msg.sender, _maxSupply); // one time mint - ever!
     }
 }
