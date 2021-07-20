@@ -67,7 +67,7 @@ module.exports = {
             process.env.TEST_METAMASK_PRIVATE_KEY_1, // deployer account (owner)
             process.env.TEST_METAMASK_PRIVATE_KEY_2, // receiver account (recipient)
           ],
-          providerOrUrl: `https://rinkeby.infura.io/${process.env.INFURA_VERSION}/${process.env.INFURA_KEY}`,
+          providerOrUrl: `https://rinkeby.infura.io/${process.env.TEST_INFURA_VERSION}/${process.env.TEST_INFURA_KEY}`,
         }),
       network_id: 4, // Rinkeby id
       gas: 5500000, // Rinkeby has a lower block limit than mainnet
