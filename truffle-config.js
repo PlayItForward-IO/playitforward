@@ -47,7 +47,7 @@ module.exports = {
         new HDWalletProvider({
           numberOfAddresses: 2,
           privateKeys: [
-            process.env.TEST_METAMASK_PRIVATE_KEY_1, // deployer account (owner)
+            process.env.PROD_PRIVATE_KEY_1, // deployer account (owner)
           ],
           providerOrUrl: `https://mainnet.infura.io/v3/${process.env.PROD_INFURA_KEY}`,
         }),
