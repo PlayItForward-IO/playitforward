@@ -13,8 +13,8 @@ uint256 constant _maxSupply = _maxTokens * 10 ** 18; // unit = wei
 /**
  * @dev {PlayItForward} token, including:
  *
- *  - Mint the fixed supply of 1,00,000,000 tokens on creation (deflationary mechnism)
- *  - Disable future goverance by limitting access control mechanism (no minting/pausing)
+ *  - Mint a fixed supply of 1,00,000,000 tokens on creation (deflationary mechanism)
+ *  - Disable future governance by limiting access control mechanism (no minting/pausing)
  *  - Enable the ability for holders to burn (aka destroy) their tokens
  *  - Enable the ability for holders to transfer tokens to other accounts
  *
