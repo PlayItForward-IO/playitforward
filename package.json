@@ -21,14 +21,14 @@
   "homepage": "https://github.com/PlayItForward-IO/playitforward#readme",
   "scripts": {
     "truffle": "node_modules/.bin/truffle",
-    "migrate:ci": "yarn truffle migrate --network rinkeby",
-    "migrate:main": "yarn truffle migrate --network mainnet",
     "build": "yarn truffle compile",
+    "migrate:mainnet": "yarn build && yarn truffle migrate --network mainnet",
+    "migrate:ci": "yarn build && yarn truffle migrate --network rinkeby",
     "test:dev": "yarn truffle test --network development test/*.js",
     "test:ci": "yarn build && yarn truffle test --network rinkeby test/pfwd.core.test.js",
     "test:ci:full": "yarn build && yarn truffle test --network rinkeby test/*.js",
     "test:deploy": "yarn build && yarn truffle deploy --network rinkeby",
-    "test:verify": "yarn truffle run verify PlayItForward --network rinkeby"
+    "test:verify": "yarn build && yarn truffle run verify PlayItForward --network rinkeby"
   },
   "devDependencies": {
     "@openzeppelin/contracts": "^4.2.0",
