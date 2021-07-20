@@ -1,7 +1,7 @@
-const { BN, constants, expectEvent } = require("@openzeppelin/test-helpers");
+const { constants } = require("@openzeppelin/test-helpers");
 const PlayItForward = artifacts.require("PlayItForward");
 
-contract("PlayItForward", (accounts) => {
+contract("PlayItForward Token", (accounts) => {
   const [deployer, recipient] = accounts;
   const owner = deployer;
 
@@ -11,9 +11,6 @@ contract("PlayItForward", (accounts) => {
   const totalSupply = 1000000;
 
   const toEth = (balance) => web3.utils.fromWei(balance, "ether").toString();
-  const toWei = (balance) => web3.utils.toWei(balance, "ether").toString();
-
-  const { ZERO_ADDRESS } = constants;
 
   before(async () => {
     pfwd = await PlayItForward.deployed();
@@ -36,7 +33,7 @@ contract("PlayItForward", (accounts) => {
       assert.equal(toEth(await pfwd.totalSupply()), `${totalSupply}`);
     });
 
-    it(`has assigned ${totalSupply} token to owner (deployer) `, async () => {
+    it(`has assigned ${totalSupply} token to deployer (owner)`, async () => {
       assert.equal(toEth(await pfwd.balanceOf(deployer)), `${totalSupply}`);
     });
 

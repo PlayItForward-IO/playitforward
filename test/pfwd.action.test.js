@@ -1,7 +1,7 @@
 const { BN, constants, expectEvent } = require("@openzeppelin/test-helpers");
 const PlayItForward = artifacts.require("PlayItForward");
 
-contract("PlayItForward", (accounts) => {
+contract("PlayItForward Token", (accounts) => {
   const [deployer, recipient] = accounts;
   const owner = deployer;
 
@@ -26,7 +26,7 @@ contract("PlayItForward", (accounts) => {
       pfwd = await PlayItForward.deployed();
     });
 
-    it(`can transfer ${totalSupply / 2} token to a recipient `, async () => {
+    it(`can transfer ${totalSupply / 2} token to a recipient`, async () => {
       const amount = toWei(totalSupply / 2);
       await pfwd.transfer(recipient, amount);
       assert.equal(
@@ -35,13 +35,13 @@ contract("PlayItForward", (accounts) => {
       );
     });
 
-    it(`can transfer all tokens to a recipient `, async () => {
+    it(`can transfer all tokens to a recipient`, async () => {
       const amount = toWei(totalSupply / 2);
       await pfwd.transfer(recipient, amount);
       assert.equal(toEth(await pfwd.balanceOf(recipient)), `${totalSupply}`);
     });
 
-    it(`cannot transfer more tokens that owner has `, async () => {
+    it(`cannot transfer more tokens than the deployer owns`, async () => {
       // owner has no tokens anymore
       assert.equal(toEth(await pfwd.balanceOf(owner)), "0");
 

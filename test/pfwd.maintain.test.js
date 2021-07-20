@@ -2,7 +2,7 @@ const { BN, constants, expectEvent } = require("@openzeppelin/test-helpers");
 const PlayItForward = artifacts.require("PlayItForward");
 const { expect } = require("chai");
 
-contract("PlayItForward", (accounts) => {
+contract("PlayItForward Token", (accounts) => {
   const [deployer, recipient] = accounts;
   const owner = deployer;
 
