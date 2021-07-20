@@ -1,4 +1,4 @@
-require("dotenv").config();
+require('dotenv').config();
 
 /**
  * Use this file to configure your truffle project. It's seeded with some
@@ -20,7 +20,7 @@ require("dotenv").config();
  *
  */
 
-const HDWalletProvider = require("@truffle/hdwallet-provider");
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -44,9 +44,9 @@ module.exports = {
     // options below to some value.
     //
     development: {
-      host: "127.0.0.1", // Localhost (default: none)
+      host: '127.0.0.1', // Localhost (default: none)
       port: 7545, // Standard Ethereum port (default: none)
-      network_id: "*", // Any network (default: none)
+      network_id: '*', // Any network (default: none)
     },
     // Another network with more advanced options...
     // advanced: {
@@ -91,7 +91,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "^0.8.6", // Fetch exact version from solc-bin (default: truffle's version)
+      version: '^0.8.6', // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       settings: {
         // See the solidity docs for advice about optimization and evmVersion
@@ -104,6 +104,10 @@ module.exports = {
     },
   },
 
+  plugins: ['truffle-plugin-verify'],
+  api_keys: {
+    etherscan: process.env.TEST_RINKEBY_ETHERSCAN_KEY,
+  },
   // Truffle DB is currently disabled by default; to enable it, change enabled: false to enabled: true
   //
   // Note: if you migrated your contracts prior to enabling this field in your Truffle project and want
