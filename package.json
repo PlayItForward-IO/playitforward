@@ -24,10 +24,12 @@
     "build": "yarn truffle compile",
     "migrate:mainnet": "yarn build && yarn truffle migrate --network mainnet",
     "verify:mainnet": "yarn build && yarn truffle run verify PlayItForward --network mainnet",
-    "migrate:ci": "yarn build && yarn truffle migrate --network rinkeby",
+    "<---- Test Related Commands ---->": "test related commands",
     "test:dev": "yarn truffle test --network development test/*.js",
     "test:ci": "yarn build && yarn truffle test --network rinkeby test/pfwd.core.test.js",
     "test:ci:full": "yarn build && yarn truffle test --network rinkeby test/*.js",
+    "<---- Maintenance Related Commands ---->": "maintenance related commands",
+    "migrate:ci": "yarn build && yarn truffle migrate --network rinkeby",
     "deploy:ci": "yarn build && yarn truffle deploy --network rinkeby",
     "verify:ci": "yarn build && yarn truffle run verify PlayItForward --network rinkeby"
   },
