@@ -31,10 +31,14 @@
     "<---- Development (local) ---->": "Local (DEV) commands",
     "test:dev": "yarn test development test/*.js",
     "migrate:dev": "yarn migrate development",
+    "<---- CI (ropsten) ---->": "Rinkeby (CI) commands",
+    "test:ropsten": "yarn test ropsten test/pfwd.core.test.js",
+    "migrate:ropsten": "yarn migrate ropsten",
+    "verify:ropsten": "yarn verify ropsten",
     "<---- CI (rinkeby) ---->": "Rinkeby (CI) commands",
-    "test:ci": "yarn test rinkeby test/pfwd.core.test.js",
-    "migrate:ci": "yarn migrate rinkeby",
-    "verify:ci": "yarn verify rinkeby"
+    "test:rinkeby": "yarn test rinkeby test/pfwd.core.test.js",
+    "migrate:rinkeby": "yarn migrate rinkeby",
+    "verify:rinkeby": "yarn verify rinkeby"
   },
   "devDependencies": {
     "@openzeppelin/contracts": "^4.2.0",
