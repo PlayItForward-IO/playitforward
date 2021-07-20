@@ -1,0 +1,29 @@
+{
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "**/*.html",
+      "options": {
+        "printWidth": 140
+      }
+    },
+    {
+      "files": "**/*.ts",
+      "options": {
+        "printWidth": 120
+      }
+    },
+    {
+      "files": "**/*.json",
+      "options": {
+        "printWidth": 120
+      }
+    },
+    {
+      "files": "**/*.js",
+      "options": {
+        "printWidth": 120
+      }
+    }
+  ]
+}
