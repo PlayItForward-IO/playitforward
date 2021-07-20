@@ -22,13 +22,20 @@
   "scripts": {
     "truffle": "node_modules/.bin/truffle",
     "build": "yarn truffle compile",
-    "test": "yarn truffle test --network development test/*.js"
+    "test:dev": "yarn truffle test --network development test/*.js",
+    "test:ci": "yarn build && yarn truffle test --network rinkeby test/*core.js",
+    "test:ci:full": "yarn build && yarn truffle test --network rinkeby test/*.js",
+    "test:deploy": "yarn build && yarn truffle deploy --network rinkeby"
   },
   "devDependencies": {
     "@openzeppelin/contracts": "^4.2.0",
     "@openzeppelin/test-helpers": "^0.5.12",
+    "@truffle/hdwallet-provider": "^1.4.1",
     "chai": "^4.3.4",
     "prettier": "^2.3.2",
     "truffle": "^5.4.1"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
   }
 }
