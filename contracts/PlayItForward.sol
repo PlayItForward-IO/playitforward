@@ -27,6 +27,6 @@ contract PlayItForward is ERC20Burnable {
      * See {ERC20-constructor}.
      */
     constructor() ERC20(_name, _symbol) {
-        _mint(msg.sender, _maxSupply); // one time mint - ever!
+        _mint(msg.sender, _maxSupply);
     }
 }
