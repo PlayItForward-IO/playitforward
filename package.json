@@ -20,20 +20,26 @@
   },
   "homepage": "https://github.com/PlayItForward-IO/playitforward#readme",
   "scripts": {
+    "hardhat": "node_modules/.bin/hardhat",
     "truffle": "node_modules/.bin/truffle",
+    "migrate:ci": "yarn truffle migrate --network rinkeby",
+    "migrate:main": "yarn truffle migrate --network mainnet",
     "build": "yarn truffle compile",
     "test:dev": "yarn truffle test --network development test/*.js",
     "test:ci": "yarn build && yarn truffle test --network rinkeby test/pfwd.core.test.js",
     "test:ci:full": "yarn build && yarn truffle test --network rinkeby test/*.js",
-    "test:deploy": "yarn build && yarn truffle deploy --network rinkeby"
+    "test:deploy": "yarn build && yarn truffle deploy --network rinkeby",
+    "flatten": "node_modules/.bin/truffle-flattener contracts/PlayItForward.sol"
   },
   "devDependencies": {
     "@openzeppelin/contracts": "^4.2.0",
     "@openzeppelin/test-helpers": "^0.5.12",
     "@truffle/hdwallet-provider": "^1.4.1",
     "chai": "^4.3.4",
+    "hardhat": "^2.4.3",
     "prettier": "^2.3.2",
-    "truffle": "^5.4.1"
+    "truffle": "^5.4.1",
+    "truffle-flattener": "^1.5.0"
   },
   "dependencies": {
     "dotenv": "^10.0.0"
