@@ -28,7 +28,6 @@
     "<---- Development (local) ---->": "Local (DEV) commands",
     "test:dev": "yarn truffle test --network development test/*.js",
     "migrate:dev": "yarn build && yarn truffle migrate --network development",
-    "verify:dev": "yarn build && yarn truffle run verify PlayItForward --network development",
     "<---- CI (rinkeby) ---->": "Rinkeby (CI) commands",
     "test:ci": "yarn build && yarn truffle test --network rinkeby test/pfwd.core.test.js",
     "migrate:ci": "yarn build && yarn truffle migrate --network rinkeby",
