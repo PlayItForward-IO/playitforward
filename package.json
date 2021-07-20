@@ -22,10 +22,23 @@
   "scripts": {
     "truffle": "node_modules/.bin/truffle",
     "build": "yarn truffle compile",
-    "test:dev": "yarn truffle test --network development test/*.js",
-    "test:ci": "yarn build && yarn truffle test --network rinkeby test/pfwd.core.test.js",
-    "test:ci:full": "yarn build && yarn truffle test --network rinkeby test/*.js",
-    "test:deploy": "yarn build && yarn truffle deploy --network rinkeby"
+    "test": "yarn build && yarn truffle test --network",
+    "migrate": "yarn build && yarn truffle migrate --network",
+    "verify": "yarn build && yarn truffle run verify PlayItForward --network",
+    "<---- Production (mainnet) ---->": "Mainnet (PROD) commands",
+    "migrate:prod": "yarn migrate mainnet",
+    "verify:prod": "yarn verify mainnet",
+    "<---- Development (local) ---->": "Local (DEV) commands",
+    "test:dev": "yarn test development test/*.js",
+    "migrate:dev": "yarn migrate development",
+    "<---- CI (ropsten) ---->": "Rinkeby (CI) commands",
+    "test:ropsten": "yarn test ropsten test/pfwd.core.test.js",
+    "migrate:ropsten": "yarn migrate ropsten",
+    "verify:ropsten": "yarn verify ropsten",
+    "<---- CI (rinkeby) ---->": "Rinkeby (CI) commands",
+    "test:rinkeby": "yarn test rinkeby test/pfwd.core.test.js",
+    "migrate:rinkeby": "yarn migrate rinkeby",
+    "verify:rinkeby": "yarn verify rinkeby"
   },
   "devDependencies": {
     "@openzeppelin/contracts": "^4.2.0",
@@ -33,7 +46,9 @@
     "@truffle/hdwallet-provider": "^1.4.1",
     "chai": "^4.3.4",
     "prettier": "^2.3.2",
-    "truffle": "^5.4.1"
+    "truffle": "^5.4.1",
+    "truffle-flattener": "^1.5.0",
+    "truffle-plugin-verify": "^0.5.11"
   },
   "dependencies": {
     "dotenv": "^10.0.0"
