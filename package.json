@@ -32,7 +32,7 @@
     "test:dev": "yarn test development test/*.js",
     "migrate:dev": "yarn migrate development",
     "<---- CI (rinkeby) ---->": "Rinkeby (CI) commands",
-    "test:ci": "yarn test rinkeby test/*.js",
+    "test:ci": "yarn test rinkeby test/pfwd.core.test.js",
     "migrate:ci": "yarn migrate rinkeby",
     "verify:ci": "yarn verify rinkeby"
   },
