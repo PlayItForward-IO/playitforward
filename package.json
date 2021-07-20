@@ -22,18 +22,16 @@
   "scripts": {
     "truffle": "node_modules/.bin/truffle",
     "build": "yarn truffle compile",
-    "<---- Production (mainnet) ---->": "Mainnet Production commands",
+    "<---- Production (mainnet) ---->": "Mainnet (PROD) commands",
     "migrate:mainnet": "yarn build && yarn truffle migrate --network mainnet",
     "verify:mainnet": "yarn build && yarn truffle run verify PlayItForward --network mainnet",
-    "<---- Development (local) ---->": "Local development commands",
+    "<---- Development (local) ---->": "Local (DEV) commands",
     "test:dev": "yarn truffle test --network development test/*.js",
-    "migrate:dev": "yarn build && yarn truffle migrate --network rinkeby",
-    "deploy:dev": "yarn build && yarn truffle deploy --network rinkeby",
-    "verify:dev": "yarn build && yarn truffle run verify PlayItForward --network rinkeby",
-    "<---- CI (rinkeby) ---->": "CI rinkeby commands",
+    "migrate:dev": "yarn build && yarn truffle migrate --network development",
+    "verify:dev": "yarn build && yarn truffle run verify PlayItForward --network development",
+    "<---- CI (rinkeby) ---->": "Rinkeby (CI) commands",
     "test:ci": "yarn build && yarn truffle test --network rinkeby test/pfwd.core.test.js",
     "migrate:ci": "yarn build && yarn truffle migrate --network rinkeby",
-    "deploy:ci": "yarn build && yarn truffle deploy --network rinkeby",
     "verify:ci": "yarn build && yarn truffle run verify PlayItForward --network rinkeby"
   },
   "devDependencies": {
