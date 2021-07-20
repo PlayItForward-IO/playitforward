@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/PlayItForward-IO/playitforward#readme",
   "scripts": {
-    "hardhat": "node_modules/.bin/hardhat",
     "truffle": "node_modules/.bin/truffle",
     "migrate:ci": "yarn truffle migrate --network rinkeby",
     "migrate:main": "yarn truffle migrate --network mainnet",
@@ -36,7 +35,6 @@
     "@openzeppelin/test-helpers": "^0.5.12",
     "@truffle/hdwallet-provider": "^1.4.1",
     "chai": "^4.3.4",
-    "hardhat": "^2.4.3",
     "prettier": "^2.3.2",
     "truffle": "^5.4.1",
     "truffle-flattener": "^1.5.0"
