@@ -42,6 +42,21 @@ module.exports = {
       port: 7545, // Standard Ethereum port (default: none)
       network_id: '*', // Any network (default: none)
     },
+    mainnet: {
+      provider: () =>
+        new HDWalletProvider({
+          numberOfAddresses: 2,
+          privateKeys: [
+            process.env.TEST_METAMASK_PRIVATE_KEY_1, // deployer account (owner)
+          ],
+          providerOrUrl: `https://mainnet.infura.io/v3/${process.env.PROD_INFURA_KEY}`,
+        }),
+      network_id: 1,
+      gas: 5500000,
+      confirmations: 2, // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
+    },
     ropsten: {
       provider: () =>
         new HDWalletProvider({
@@ -53,7 +68,7 @@ module.exports = {
           providerOrUrl: `https://ropsten.infura.io/v3/${process.env.TEST_INFURA_KEY}`,
         }),
       network_id: 3, // ropsten id
-      gas: 5500000, // Rinkeby has a lower block limit than mainnet
+      gas: 5500000, // ropsten has a lower block limit than mainnet
       confirmations: 2, // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
@@ -68,8 +83,8 @@ module.exports = {
           ],
           providerOrUrl: `https://rinkeby.infura.io/v3/${process.env.TEST_INFURA_KEY}`,
         }),
-      network_id: 4, // Rinkeby id
-      gas: 5500000, // Rinkeby has a lower block limit than mainnet
+      network_id: 4, // rinkeby id
+      gas: 5500000, // rinkeby has a lower block limit than mainnet
       confirmations: 2, // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
