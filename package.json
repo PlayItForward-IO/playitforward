@@ -23,7 +23,7 @@
     "truffle": "node_modules/.bin/truffle",
     "build": "yarn truffle compile",
     "migrate:mainnet": "yarn build && yarn truffle migrate --network mainnet",
-    "verify:mainnet": "yarn build && yarn truffle run verify PlayItForward --network rinkeby",
+    "verify:mainnet": "yarn build && yarn truffle run verify PlayItForward --network mainnet",
     "migrate:ci": "yarn build && yarn truffle migrate --network rinkeby",
     "test:dev": "yarn truffle test --network development test/*.js",
     "test:ci": "yarn build && yarn truffle test --network rinkeby test/pfwd.core.test.js",
