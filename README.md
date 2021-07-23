@@ -3,7 +3,7 @@
 
 <img style="display: block; margin: 20px auto" width="300" src="assets/images/pfwd-gold.png">
 
-PayItForward (PAY)© is a decentralized digital token created by developers for developers. PlayItForward is used as a digital token to support open-source projects. It can also be used to support content creators such as YouTubers, Podcasters, or simply anyone who deserves a helping-hand in achieving a greater good, for the benefit of their communities.
+PayItForward (PFWD)© is a decentralized digital token created by developers for developers. PlayItForward is used as a digital token to support open-source projects. It can also be used to support content creators such as YouTubers, Podcasters, or simply anyone who deserves a helping-hand in achieving a greater good, for the benefit of their communities.
 
 ## Mission
 
