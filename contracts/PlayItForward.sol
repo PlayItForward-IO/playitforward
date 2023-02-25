@@ -18,7 +18,7 @@ uint256 constant _maxSupply = _maxTokens * 10 ** 18; // unit = wei
  *  - Enable the ability for holders to burn (aka destroy) their tokens
  *  - Enable the ability for holders to transfer tokens to other accounts
  *
- *  - Info: https://playitforward.io
+ *  - Info: https://playitforward.info
  */
 contract PlayItForward is ERC20Burnable {
     /**
